@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html style="overflow:hidden">
+    <head>
+        <script type="text/javascript" src="frame-writer.js"></script>
+        <script type="text/javascript" src="camera-source.js"></script>
+        <script type="text/javascript" src="looking-glass.js"></script>
+    </head>
+
+    <body style="position: fixed; overflow:hidden; margin:0px;">
+        <script type="text/javascript">
+            let camera = new LGCameraSource();
+            let overlayOperation = new LGFrameWriter();
+            let lg = new LookingGlass(camera, [ overlayOperation ]);
+            lg.create(document, ()=>{
+                console.log('created')
+                lg.play(()=>{
+                    console.log('init')
+                    overlayOperation.run(camera.ctx1, lg.els.vizCanvas, camera.width, camera.height);
+                });
+            });
+        </script>
+    </body>
+</html>

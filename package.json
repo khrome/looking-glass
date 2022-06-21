@@ -1,0 +1,13 @@
+{
+    "name": "looking-glass",
+    "version": "0.0.1",
+    "main": "looking-glass.js",
+    "devDependencies": {
+        "chai": "^4.3.6",
+        "mocha": "^10.0.0"
+    },
+    "scripts":{
+        "secure-serve":"npx http-server -S -C cert.pem --port=\"3000\"",
+        "serve":"npx http-server --port=\"3000\""
+    }
+}
