@@ -1,5 +1,5 @@
 {
-    "name": "looking-glass",
+    "name": "looking-glass-app",
     "version": "0.0.1",
     "main": "looking-glass.js",
     "devDependencies": {
